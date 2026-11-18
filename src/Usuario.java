@@ -86,6 +86,56 @@ public class Usuario {
 
     // Mi nota: como los atributos son private,
     // los get permiten leerlos desde otras clases; return devuelve el valor.
+
+    public void setTipoIdentificacion(String tipoIdentificacion) {
+        this.tipoIdentificacion = tipoIdentificacion;
+    }
+    public void setNumeroIdentificacion(String numeroIdentificacion) {
+        this.numeroIdentificacion = numeroIdentificacion;
+    }
+    public void setPrimerNombre(String primerNombre){
+        this.primerNombre = primerNombre;
+    }
+    public void setSegundoNombre(String segundoNombre){
+        this.segundoNombre = segundoNombre;
+    }
+    public void setPrimerApellido(String primerApellido){
+        this.primerApellido = primerApellido;
+    }
+    public void setSegundoApellido(String segundoApellido){
+        this.segundoApellido = segundoApellido;
+    }
+    public void setUsername (String username){
+        this.username = username;
+    }
+    public void setPassword (String password){
+        this.password = password;
+    }
+    public void setTelefono (String telefono){
+        this.telefono = telefono;
+    }
+    public void setCorreo (String correo){
+        this.correo = correo;
+    }
+    public void setRutaFoto (String rutaFoto){
+        this.rutaFoto = rutaFoto;
+    }
+
+    //El set cambia el valor de un atributo privado desde otra clase, el get lee el set escribe
+    //No hay SetId porque ese lo asgina el programa
+
+    @Override
+    public String toString(){
+        String nombreCompleto = primerNombre;
+        if (!segundoNombre.isEmpty()){
+            nombreCompleto += "" + segundoNombre;
+        }
+        nombreCompleto += "" + primerApellido;
+        if (!segundoApellido.isEmpty()){
+            nombreCompleto += "" + segundoApellido;
+        }
+        return id + " - " + username + " - " + nombreCompleto;
+    }
 }
 
 
