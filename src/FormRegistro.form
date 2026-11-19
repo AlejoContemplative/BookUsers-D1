@@ -20,7 +20,10 @@
             <preferred-size width="150" height="-1"/>
           </grid>
         </constraints>
-        <properties/>
+        <properties>
+          <name value=""/>
+          <text value=""/>
+        </properties>
       </component>
       <component id="76610" class="javax.swing.JTextField" binding="txtPrimerNombre">
         <constraints>
@@ -28,7 +31,10 @@
             <preferred-size width="150" height="-1"/>
           </grid>
         </constraints>
-        <properties/>
+        <properties>
+          <name value=""/>
+          <text value=""/>
+        </properties>
       </component>
       <component id="393aa" class="javax.swing.JTextField" binding="txtSegundoNombre">
         <constraints>
@@ -36,7 +42,10 @@
             <preferred-size width="150" height="-1"/>
           </grid>
         </constraints>
-        <properties/>
+        <properties>
+          <name value=""/>
+          <text value=""/>
+        </properties>
       </component>
       <component id="531b5" class="javax.swing.JTextField" binding="txtPrimerApellido">
         <constraints>
@@ -44,7 +53,10 @@
             <preferred-size width="150" height="-1"/>
           </grid>
         </constraints>
-        <properties/>
+        <properties>
+          <name value=""/>
+          <text value=""/>
+        </properties>
       </component>
       <component id="ce3bc" class="javax.swing.JTextField" binding="txtSegundoApellido">
         <constraints>
@@ -52,7 +64,10 @@
             <preferred-size width="150" height="-1"/>
           </grid>
         </constraints>
-        <properties/>
+        <properties>
+          <name value=""/>
+          <text value=" "/>
+        </properties>
       </component>
       <component id="1fac3" class="javax.swing.JTextField" binding="txtCorreo">
         <constraints>
@@ -60,7 +75,10 @@
             <preferred-size width="150" height="-1"/>
           </grid>
         </constraints>
-        <properties/>
+        <properties>
+          <name value=""/>
+          <text value=""/>
+        </properties>
       </component>
       <component id="1c89c" class="javax.swing.JButton" binding="btnCargarFoto">
         <constraints>
@@ -100,7 +118,9 @@
             <preferred-size width="150" height="-1"/>
           </grid>
         </constraints>
-        <properties/>
+        <properties>
+          <text value=""/>
+        </properties>
       </component>
       <component id="26472" class="javax.swing.JPasswordField" binding="pwdPassword">
         <constraints>
@@ -108,7 +128,9 @@
             <preferred-size width="150" height="-1"/>
           </grid>
         </constraints>
-        <properties/>
+        <properties>
+          <text value=""/>
+        </properties>
       </component>
     </children>
   </grid>
