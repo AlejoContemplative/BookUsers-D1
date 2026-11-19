@@ -16,9 +16,15 @@ public class FormMenu extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(500, 300);
         setLocationRelativeTo(null);
+
         btnCreditos.addActionListener(e -> {
             FormCreditos creditos = new FormCreditos();
             creditos.setVisible(true);
+        });
+
+        btnRegistro.addActionListener(e -> {
+            FormRegistro registro = new FormRegistro(usuarios);
+            registro.setVisible(true);
         });
     }
 
