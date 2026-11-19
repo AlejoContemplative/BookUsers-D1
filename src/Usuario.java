@@ -1,5 +1,7 @@
 public class Usuario {
 
+    private static int siguienteId = 1;
+
     private int id;
     private String tipoIdentificacion;
     private String numeroIdentificacion;
@@ -121,6 +123,10 @@ public class Usuario {
         this.rutaFoto = rutaFoto;
     }
 
+    public static int generarId(){
+        return siguienteId++;
+    }
+
     //El set cambia el valor de un atributo privado desde otra clase, el get lee el set escribe
     //No hay SetId porque ese lo asgina el programa
 
@@ -128,11 +134,11 @@ public class Usuario {
     public String toString(){
         String nombreCompleto = primerNombre;
         if (!segundoNombre.isEmpty()){
-            nombreCompleto += "" + segundoNombre;
+            nombreCompleto += " " + segundoNombre;
         }
-        nombreCompleto += "" + primerApellido;
+        nombreCompleto += " " + primerApellido;
         if (!segundoApellido.isEmpty()){
-            nombreCompleto += "" + segundoApellido;
+            nombreCompleto += " " + segundoApellido;
         }
         return id + " - " + username + " - " + nombreCompleto;
     }

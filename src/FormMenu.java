@@ -1,10 +1,12 @@
 import javax.swing.*;
+import java.util.ArrayList;
 
 public class FormMenu extends JFrame {
     private JButton btnRegistro;
     private JButton btnListado;
     private JButton btnCreditos;
     private JPanel panelPrincipal;
+    private ArrayList<Usuario> usuarios = new ArrayList<>();
 
     // el form es lo grafico, el java es el codigo
 
