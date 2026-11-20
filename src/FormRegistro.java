@@ -65,10 +65,10 @@ public class FormRegistro extends JFrame {
         txtSegundoNombre.setBorder(BorderFactory.createTitledBorder("Segundo nombre (opcional)"));
         txtPrimerApellido.setBorder(BorderFactory.createTitledBorder("Primer apellido"));
         txtSegundoApellido.setBorder(BorderFactory.createTitledBorder("Segundo apellido (opcional)"));
-        lblUsername.setBorder(BorderFactory.createTitledBorder("Username (se genera solo)"));
+        lblUsername.setBorder(BorderFactory.createTitledBorder("Username"));
         pwdPassword.setBorder(BorderFactory.createTitledBorder("Contraseña"));
         txtTelefono.setBorder(BorderFactory.createTitledBorder("Teléfono"));
-        txtCorreo.setBorder(BorderFactory.createTitledBorder("Correo (debe tener @)"));
+        txtCorreo.setBorder(BorderFactory.createTitledBorder("Correo"));
         lblFoto.setBorder(BorderFactory.createTitledBorder("Foto"));
         lblFoto.setText("");
 
@@ -133,6 +133,15 @@ public class FormRegistro extends JFrame {
         });
     }
 
+    private boolean numeroYaRegistrado(String numero) {
+        for (Usuario u : usuarios) {
+            if (u.getNumeroIdentificacion().equals(numero)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     private boolean validarCampos() {
         String tipo = cmbTipoId.getSelectedItem().toString();
         String numero = txtNumeroId.getText().trim();
@@ -149,6 +158,10 @@ public class FormRegistro extends JFrame {
             avisar("El número de identificación solo puede tener dígitos.");
             return false;
         }
+        if (numeroYaRegistrado(numero)) {
+            avisar("Ya existe un usuario registrado con ese número de identificación.");
+            return false;
+        }
         if (txtPrimerNombre.getText().trim().isEmpty()) {
             avisar("El primer nombre es obligatorio.");
             return false;
@@ -159,6 +172,10 @@ public class FormRegistro extends JFrame {
         }
         if (password.isEmpty()) {
             avisar("La contraseña es obligatoria.");
+            return false;
+        }
+        if (password.length() < 8) {
+            avisar("La contraseña debe tener mínimo 8 caracteres.");
             return false;
         }
         if (telefono.isEmpty()) {
@@ -219,3 +236,5 @@ public class FormRegistro extends JFrame {
         });
     }
 }
+
+
