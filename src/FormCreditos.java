@@ -14,10 +14,10 @@ public class FormCreditos extends JFrame {
         txtCreditos.setEditable(false);
         txtCreditos.setText(
                 "Alejandro Arenas Bustamante\n"
-                        + "Código: (código de Alejandro)\n"
-                        + "Correo: (correo de Alejandro)\n\n"
-                        + "Ariana Albarran (tu segundo apellido)\n"
-                        + "Código: (tu código)\n"
-                        + "Correo: (tu correo)");
+                        + "Código: UNP-KC44-W6HD\n"
+                        + "Correo: alejandro.arenabus@unipaz.edu.co\n\n"
+                        + "Ariana Sharloth Albarran Robles\n"
+                        + "Código: UNP-K5NH-3AZW\n"
+                        + "Correo: ariana.albarranrob@unipaz.edu.co");
     }
 }

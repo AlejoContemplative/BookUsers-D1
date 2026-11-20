@@ -31,10 +31,11 @@ public class FormRegistro extends JFrame {
         setTitle("BookUsers · Registro");
         setContentPane(panelPrincipal);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        setSize(500, 650);
+        setSize(500, 780);
         setLocationRelativeTo(null);
         lblUsername.setText("");
         llenarTipos();
+        ponerEtiquetas();
         activarUsername();
         activarCargarFoto();
         activarGuardar();
@@ -55,6 +56,24 @@ public class FormRegistro extends JFrame {
         for (String t : tipos) {
             cmbTipoId.addItem(t);
         }
+    }
+
+    private void ponerEtiquetas() {
+        cmbTipoId.setBorder(BorderFactory.createTitledBorder("Tipo de identificación"));
+        txtNumeroId.setBorder(BorderFactory.createTitledBorder("Número de identificación"));
+        txtPrimerNombre.setBorder(BorderFactory.createTitledBorder("Primer nombre"));
+        txtSegundoNombre.setBorder(BorderFactory.createTitledBorder("Segundo nombre (opcional)"));
+        txtPrimerApellido.setBorder(BorderFactory.createTitledBorder("Primer apellido"));
+        txtSegundoApellido.setBorder(BorderFactory.createTitledBorder("Segundo apellido (opcional)"));
+        lblUsername.setBorder(BorderFactory.createTitledBorder("Username (se genera solo)"));
+        pwdPassword.setBorder(BorderFactory.createTitledBorder("Contraseña"));
+        txtTelefono.setBorder(BorderFactory.createTitledBorder("Teléfono"));
+        txtCorreo.setBorder(BorderFactory.createTitledBorder("Correo (debe tener @)"));
+        lblFoto.setBorder(BorderFactory.createTitledBorder("Foto"));
+        lblFoto.setText("");
+
+        btnCargarFoto.setText("Cargar foto");
+        btnGuardar.setText("Guardar");
     }
 
     private String quitarTildes(String texto) {
@@ -195,7 +214,6 @@ public class FormRegistro extends JFrame {
             );
 
             usuarios.add(u);
-            System.out.println(u);
             JOptionPane.showMessageDialog(this, "Usuario registrado: " + u.getUsername());
             limpiarFormulario();
         });
