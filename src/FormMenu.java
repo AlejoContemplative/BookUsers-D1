@@ -17,7 +17,7 @@ public class FormMenu extends JFrame {
     // el form es lo grafico, el java es el codigo
 
     public FormMenu(){
-        setTitle("BookUsers - Alejandro Arenas");
+        setTitle("BookUsers · Alejandro Arenas y Ariana Albarrán");
         armarPantalla();
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(500, 350);
